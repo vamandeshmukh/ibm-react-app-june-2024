@@ -36,10 +36,11 @@ const Login = () => {
     return (
         <>
             <h1>Login Component</h1>
-            <hr />
             <form onSubmit={handleSubmit}>
                 <input type="text" name="username" value={loginData.username} onChange={handleInput} />
+                <br />
                 <input type="password" name="password" value={loginData.password} onChange={handleInput} />
+                <br />
                 <input type="submit" value="Login" />
             </form>
             <p>{message}</p>
