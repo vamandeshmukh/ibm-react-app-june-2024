@@ -1,3 +1,12 @@
+# IBM ReactJS 10 June 2024 
+
+Important concepts in ReactJS 
+
+component 
+JSX
+state
+props 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

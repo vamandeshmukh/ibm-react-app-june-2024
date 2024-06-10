@@ -1,8 +1,13 @@
+import Login from "./components/Login";
+
 const App = () => {
 
   return (
     <div>
+      <h1>App Component</h1>
       <p>Hello world!</p>
+      <Login />
+      {/* <Login></Login> */}
     </div>
   );
 }
