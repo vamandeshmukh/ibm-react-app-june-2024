@@ -2,6 +2,8 @@ import { useState } from "react";
 
 const Login = () => {
 
+    // let loginData = {};
+
     const [loginData, setLoginData] = useState({
         username: '',
         password: '',
@@ -10,12 +12,12 @@ const Login = () => {
     const [message, setMessage] = useState('');
 
     const handleInput = (evt) => {
-        console.log(loginData);
+        console.log('before change', loginData);
         setLoginData({
             ...loginData,
             [evt.target.name]: evt.target.value,
         });
-        console.log(loginData);
+        console.log('after change', loginData);
     };
 
     const handleSubmit = (evt) => {

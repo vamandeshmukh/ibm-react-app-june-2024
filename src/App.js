@@ -1,4 +1,5 @@
 import Login from "./components/Login";
+import Register from "./components/Register";
 
 const App = () => {
 
@@ -6,7 +7,8 @@ const App = () => {
     <div>
       <h1>App Component</h1>
       <p>Hello world!</p>
-      <Login />
+      {/* <Login /> */}
+      <Register />
       {/* <Login></Login> */}
     </div>
   );
