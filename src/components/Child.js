@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Child = (props) => {
 
-    const childData = 'Monu'; 
+    const childData = 'Monu';
     const parentDataInChild = props.parentToChild;
 
     const sendDataToParent = () => {
@@ -20,5 +20,7 @@ const Child = (props) => {
         </>
     );
 }
+
+Child.defaultProps = { parentToChild: 'Tonu' };
 
 export default Child;
