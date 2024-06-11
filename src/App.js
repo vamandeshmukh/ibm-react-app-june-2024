@@ -11,9 +11,9 @@ const App = () => {
       <p>Hello world!</p>
       {/* <Login /> */}
       {/* <Login></Login> */}
-      {/* <Register /> */}
+      <Register />
       {/* <Logout /> */}
-      <Parent />
+      {/* <Parent /> */}
     </div>
   );
 }
