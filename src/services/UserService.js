@@ -13,10 +13,15 @@ const register = (user) => {
     return axios.post(apiUrl, user);
 };
 
-const update = (user) => {
+const getProfile = (id) => {
+    console.log(id);
+    return axios.get(`${apiUrl}/${id}`);
+};
+
+const updateProfile = (user) => {
     console.log(user);
     return axios.put(apiUrl, user);
 };
 
-export { login, register, update };
+export { login, register, updateProfile, getProfile };
 
