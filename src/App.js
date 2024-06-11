@@ -1,4 +1,6 @@
 import Login from "./components/Login";
+import Logout from "./components/Logout";
+import Parent from "./components/Parent";
 import Register from "./components/Register";
 
 const App = () => {
@@ -8,11 +10,15 @@ const App = () => {
       <h1>App Component</h1>
       <p>Hello world!</p>
       {/* <Login /> */}
-      <Register />
       {/* <Login></Login> */}
+      {/* <Register /> */}
+      {/* <Logout /> */}
+      <Parent />
     </div>
   );
 }
+
+// break till 11:38 
 
 export default App;
 
