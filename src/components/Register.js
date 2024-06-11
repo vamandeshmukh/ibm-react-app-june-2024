@@ -35,24 +35,39 @@ const Register = () => {
 
     return (
         <>
-            <h1>Register Component 1</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="username" value={registerData.username} onChange={handleInput} />
-                <br />
-                <input type="password" name="password" value={registerData.password} onChange={handleInput} />
-                <br />
-                <input type="submit" value="Register 1"/>
-            </form>
-            <p>{message}</p>
-            <h1>Register Component 2</h1>
-            <form>
-                <input type="text" name="username" value={registerData.username} onChange={handleInput} />
-                <br />
-                <input type="password" name="password" value={registerData.password} onChange={handleInput} />
-                <br />
-                <input type="button" value="Register 2" onClick={handleSubmit} />
-            </form>
-            <p>{message}</p>
+            <>
+                <h1>Register Component 1</h1>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" name="username" value={registerData.username} onChange={handleInput} />
+                    <br />
+                    <input type="password" name="password" value={registerData.password} onChange={handleInput} />
+                    <br />
+                    <input type="submit" value="Register 1" />
+                </form>
+                <p>{message}</p>
+            </>
+            <>
+                <h1>Register Component 2</h1>
+                <form>
+                    <input type="text" name="username" value={registerData.username} onChange={handleInput} />
+                    <br />
+                    <input type="password" name="password" value={registerData.password} onChange={handleInput} />
+                    <br />
+                    <input type="button" value="Register 2" onClick={handleSubmit} />
+                </form>
+                <p>{message}</p>
+            </>
+            <>
+                <h1>Register Component 3</h1>
+                <form>
+                    <input type="text" name="username" value={registerData.username} onChange={handleInput} />
+                    <br />
+                    <input type="password" name="password" value={registerData.password} onChange={handleInput} />
+                    <br />
+                    <button onClick={handleSubmit}>Register 3</ button>
+                </form>
+                <p>{message}</p>
+            </>
         </>
     );
 
