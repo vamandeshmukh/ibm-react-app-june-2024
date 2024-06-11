@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Login = () => {
 
-    // let loginData = {};
+    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
     const [loginData, setLoginData] = useState({
         username: '',
