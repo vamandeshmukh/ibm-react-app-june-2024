@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Register = () => {
 
-    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+    const apiUrl = 'https://jsonplace';
 
     const [registerData, setRegisterData] = useState({
         username: '',
