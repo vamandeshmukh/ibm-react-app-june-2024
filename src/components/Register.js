@@ -13,7 +13,6 @@ const Register = () => {
     const [message, setMessage] = useState('');
 
     const handleInput = (evt) => {
-        console.log('before change', registerData);
         setRegisterData({
             ...registerData,
             [evt.target.name]: evt.target.value,
@@ -31,9 +30,14 @@ const Register = () => {
         //     .catch(() => {});
 
         axios.post(apiUrl, registerData)
-            .then(() => { })
-            .catch(() => { });
-
+            .then((response) => {
+                console.log(response.data);
+                setMessage(`Hi ${response.data.username}! You've registered successfully!`);
+            })
+            .catch((error) => {
+                console.error(error);
+                setMessage(error.message);
+            });
 
         setRegisterData({
             username: '',
@@ -44,7 +48,7 @@ const Register = () => {
     return (
         <>
             <>
-                <h1>Register Component 1</h1>
+                <h1>Register Component</h1>
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="username" value={registerData.username} onChange={handleInput} />
                     <br />
