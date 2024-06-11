@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { login } from "../services/UserService";
+
 const Login = () => {
 
     const apiUrl = 'https://jsonplaceholder.typicode.com/users';
@@ -12,7 +14,6 @@ const Login = () => {
     const [message, setMessage] = useState('');
 
     const handleInput = (evt) => {
-        console.log('before change', loginData);
         setLoginData({
             ...loginData,
             [evt.target.name]: evt.target.value,
@@ -23,16 +24,35 @@ const Login = () => {
     const handleSubmit = (evt) => {
         console.log(loginData);
         evt.preventDefault();
-        console.log(loginData);
-        if (loginData.username === 'vaman' && loginData.password === 'vaman') {
-            setMessage(`Hi ${loginData.username}! You've logged in successfully!`);
-        } else {
-            setMessage('Invalid credentials!');
-        }
+
+        login(loginData)
+            .then((response) => {
+                let validUsername = '';
+                console.log(response.data);
+                response.data.forEach((resp) => {
+                    console.log(resp.username);
+                    if (resp.username === loginData.username && resp.username === loginData.password) {
+                        validUsername = resp.username;
+                    }
+                })
+                if (validUsername) {
+                    console.log(loginData.username);
+                    setMessage(`Hi ${validUsername}! You've logged in successfully!`);
+                }
+                else {
+                    setMessage('Invalid credentials!');
+                };
+            })
+            .catch((error) => {
+                console.error(error);
+                setMessage(error.message);
+            });
+
         setLoginData({
             username: '',
             password: '',
         });
+        setMessage('');
     };
 
     return (

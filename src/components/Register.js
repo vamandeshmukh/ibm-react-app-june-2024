@@ -1,5 +1,6 @@
-import axios from "axios";
+
 import { useState } from "react";
+import { register } from "../services/UserService";
 
 const Register = () => {
 
@@ -29,7 +30,7 @@ const Register = () => {
         //     .then(() => {})
         //     .catch(() => {});
 
-        axios.post(apiUrl, registerData)
+        register(registerData)
             .then((response) => {
                 console.log(response.data);
                 setMessage(`Hi ${response.data.username}! You've registered successfully!`);
@@ -43,6 +44,7 @@ const Register = () => {
             username: '',
             password: '',
         });
+        setMessage('');
     };
 
     return (
