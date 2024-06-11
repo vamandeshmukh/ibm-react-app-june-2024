@@ -61,33 +61,4 @@ const Register = () => {
 
 export default Register;
 
-// const Register = () => {
 
-//     return (
-//         <div>
-//             <h1>Register Component</h1>
-//             <p>Register Component</p>
-//         </div>
-//     );
-
-// };
-
-// export default Register;
-
-// import { Component } from "react";
-
-// class Register extends Component {
-
-//     render() {
-//         return <p>Register Component</p>
-//     }
-// };
-
-// export default Register;
-
-// const Register = () => {
-
-//     return <p>Register Component</p>
-// };
-
-// export default Register;
