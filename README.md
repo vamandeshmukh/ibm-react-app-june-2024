@@ -3,11 +3,19 @@
 Important concepts in ReactJS 
 
 component 
+
 JSX
+
 state
+
 props 
 
 ### Passing data using props 
+
+- parent to child - pass props using attributes 
+
+- child to parent - pass a function through props using attributes 
+
 
 
 # Getting Started with Create React App
