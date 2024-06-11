@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 
 const Register = () => {
@@ -23,15 +24,17 @@ const Register = () => {
     const handleSubmit = (evt) => {
         console.log(registerData);
         evt.preventDefault();
-        console.log(registerData);
 
-        // make API call == Make HTTP request 
+        // syntax 
+        // axios.post(<API>, <DATA>)
+        //     .then(() => {})
+        //     .catch(() => {});
 
-        if (registerData.username === 'vaman' && registerData.password === 'vaman') {
-            setMessage(`Hi ${registerData.username}! You've registered in successfully!`);
-        } else {
-            setMessage('Invalid credentials!');
-        }
+        axios.post(apiUrl, registerData)
+            .then(() => { })
+            .catch(() => { });
+
+
         setRegisterData({
             username: '',
             password: '',
