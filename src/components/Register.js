@@ -2,6 +2,8 @@ import { useState } from "react";
 
 const Register = () => {
 
+    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
     const [registerData, setRegisterData] = useState({
         username: '',
         password: '',
@@ -22,6 +24,9 @@ const Register = () => {
         console.log(registerData);
         evt.preventDefault();
         console.log(registerData);
+
+        // make API call == Make HTTP request 
+
         if (registerData.username === 'vaman' && registerData.password === 'vaman') {
             setMessage(`Hi ${registerData.username}! You've registered in successfully!`);
         } else {
@@ -42,12 +47,12 @@ const Register = () => {
                     <br />
                     <input type="password" name="password" value={registerData.password} onChange={handleInput} />
                     <br />
-                    <input type="submit" value="Register 1" />
+                    <input type="submit" value="Register" />
                 </form>
                 <p>{message}</p>
             </>
         </>
-    );x
+    );
 };
 
 export default Register;
