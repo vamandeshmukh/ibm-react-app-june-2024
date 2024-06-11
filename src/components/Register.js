@@ -53,7 +53,6 @@ const Register = () => {
                 <input type="button" value="Register 2" onClick={handleSubmit} />
             </form>
             <p>{message}</p>
-
         </>
     );
 
