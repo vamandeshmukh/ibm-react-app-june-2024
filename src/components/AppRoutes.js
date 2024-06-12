@@ -15,13 +15,14 @@ const AppRoutes = () => {
                     <ToolBar />
                 </>
                 <Routes>
+                    <Route path="blog-list" element={<Home />} />
+                    <Route path="blog-details/:id" element={<Home />} />
                     <Route path="login" element={<Login />} />
                     <Route path="register" element={<Register />} />
                     <Route path="profile" element={<Profile />} />
                     <Route path="home" element={<Home />} />
                     <Route exact path="/" element={<Home />} />
                     <Route path="*" element={<Page404 />} />
-
 
                 </Routes>
             </BrowserRouter>

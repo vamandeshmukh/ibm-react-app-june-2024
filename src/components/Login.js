@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-
-
 import { login } from "../services/UserService";
 
 // import userService from "../services/UserService";
@@ -45,7 +43,10 @@ const Login = () => {
                 if (validUsername) {
                     console.log(loginData.username);
                     setMessage(`Hi ${validUsername}! You've logged in successfully!`);
-                    navigate('/home');
+                    setTimeout(() => {
+                        navigate('/profile');
+                    }, 1000);
+
                 }
                 else {
                     setMessage('Invalid credentials!');
@@ -75,6 +76,7 @@ const Login = () => {
             </form>
             <p>{message}</p>
             <p>Not yet registerd? <Link to="/register">Register</Link> </p>
+            <p>Not yet registerd? <Link to='[`/blog-details/${blogId}`]'>Register</Link> </p>
         </>
     );
 };
