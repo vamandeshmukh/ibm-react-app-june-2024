@@ -5,6 +5,8 @@ import Profile from "./Profile";
 import Home from "./Home";
 import Page404 from "./Page404";
 import ToolBar from "./ToolBar";
+import BlogDetails from "./BlogDetails";
+import BlogList from "./BlogList";
 
 const AppRoutes = () => {
 
@@ -15,8 +17,8 @@ const AppRoutes = () => {
                     <ToolBar />
                 </>
                 <Routes>
-                    <Route path="blog-list" element={<Home />} />
-                    <Route path="blog-details/:id" element={<Home />} />
+                    <Route path="blog-list" element={<BlogList />} />
+                    <Route path="blog-details/:id" element={<BlogDetails />} />
                     <Route path="login" element={<Login />} />
                     <Route path="register" element={<Register />} />
                     <Route path="profile" element={<Profile />} />
