@@ -1,3 +1,4 @@
+import AppRoutes from "./components/AppRoutes";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Parent from "./components/Parent";
@@ -10,12 +11,12 @@ const App = () => {
     <div>
       <h1>App Component</h1>
       <p>App Component</p>
-      {/* <Login /> */}
-      {/* <Login></Login> */}
-      {/* <Register /> */}
-      {/* <Logout /> */}
-      {/* <Parent /> */}
-      <Profile />
+      <AppRoutes />
+      {/* <Login />
+      <Register />
+      <Logout />
+      <Parent />
+      <Profile /> */}
     </div>
   );
 }
