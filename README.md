@@ -16,6 +16,27 @@ props
 
 - child to parent - pass a function through props using attributes 
 
+HTTP requests with axios
+------------------------ 
+get
+post
+put
+delete
+
+Routing 
+------- 
+
+react-router-dom 
+BrowserRouter 
+Routes
+Route
+Link
+useNavigate
+Navigate
+useParams 
+
+
+
 
 
 ------------------------------------------------------------------

@@ -13,7 +13,8 @@ const getBlogById = (id) => {
 };
 
 const writeBlogPost = (blog) => {
-    // make a POST request here 
+    console.log(blog);
+    return axios.post(blogUrl, blog);
 };
 
 export { getAllBlogs, getBlogById, writeBlogPost };
