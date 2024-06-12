@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import { login } from "../services/UserService";
 
 // import userService from "../services/UserService";
@@ -8,7 +7,6 @@ import { login } from "../services/UserService";
 
 const Login = () => {
 
-    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
     const navigate = useNavigate();
 
     const [loginData, setLoginData] = useState({
