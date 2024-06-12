@@ -1,17 +1,24 @@
-
+import { useEffect, useState } from "react";
+import { getBlogById } from "../services/BlogService";
 import { useParams } from "react-router-dom";
-
 const BlogDetails = () => {
-
-    const blogParam = useParams();
-
-
+    const blogParam = useParams(); const [blogData, setBlogData] = useState({});
+    useEffect(() => {
+        console.log('useEffect'); getBlogDetails();
+    }, [])
+    const getBlogDetails = () => {
+        getBlogById(blogParam.id)
+            .then((response) => { console.log(response.data); setBlogData(response.data); })
+            .catch((error) => { console.error(error); });
+    };
     return (
-        <>
-            <h1>Blog Details Component</h1>
-            <p>Details of a blog post </p>
-            <p>BLog id: {blogParam.id} </p>
-        </>
+        <div className="container">
+            <> <h1>{blogData.title}</h1> <hr /> <p> {blogData.body} </p>
+                <p>{blogData.title && Array.from(blogData.title).map((blog, i) => {
+                    return <span obj={blog} key={i}> {blogData.body} </span>;
+                })}</p>
+            </>
+        </div>
     );
 
 };
