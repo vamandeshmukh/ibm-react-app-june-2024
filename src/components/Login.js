@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { login } from "../services/UserService";
 
@@ -69,10 +70,9 @@ const Login = () => {
                 <input type="submit" value="Login" />
             </form>
             <p>{message}</p>
+            <p>Not yet registerd? <Link to="/register">Register</Link> </p>
         </>
     );
-
-
 };
 
 export default Login;

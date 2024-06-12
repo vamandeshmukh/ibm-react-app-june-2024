@@ -1,28 +1,44 @@
 import AppRoutes from "./components/AppRoutes";
-import Login from "./components/Login";
-import Logout from "./components/Logout";
-import Parent from "./components/Parent";
-import Profile from "./components/Profile";
-import Register from "./components/Register";
+
 
 const App = () => {
 
   return (
     <div>
-      <h1>App Component</h1>
-      <p>App Component</p>
       <AppRoutes />
-      {/* <Login />
-      <Register />
-      <Logout />
-      <Parent />
-      <Profile /> */}
     </div>
   );
 }
 
 
 export default App;
+
+
+// import AppRoutes from "./components/AppRoutes";
+// import Login from "./components/Login";
+// import Logout from "./components/Logout";
+// import Parent from "./components/Parent";
+// import Profile from "./components/Profile";
+// import Register from "./components/Register";
+
+// const App = () => {
+
+//   return (
+//     <div>
+//       <h1>App Component</h1>
+//       <p>App Component</p>
+//       <AppRoutes />
+//       {/* <Login />
+//       <Register />
+//       <Logout />
+//       <Parent />
+//       <Profile /> */}
+//     </div>
+//   );
+// }
+
+
+// export default App;
 
 // function App() {
 //   return (

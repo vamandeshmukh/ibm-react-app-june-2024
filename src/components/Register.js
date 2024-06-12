@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
 import { register } from "../services/UserService";
+
 
 const Register = () => {
 
@@ -60,6 +62,7 @@ const Register = () => {
                 </form>
                 <p>{message}</p>
             </>
+            <p>Already registerd? <Link to="/login">Login</Link> </p>
         </>
     );
 };
