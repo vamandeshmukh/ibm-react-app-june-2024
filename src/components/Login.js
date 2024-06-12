@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+
 
 import { login } from "../services/UserService";
 
@@ -9,6 +11,7 @@ import { login } from "../services/UserService";
 const Login = () => {
 
     const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+    const navigate = useNavigate();
 
     const [loginData, setLoginData] = useState({
         username: '',
@@ -42,6 +45,7 @@ const Login = () => {
                 if (validUsername) {
                     console.log(loginData.username);
                     setMessage(`Hi ${validUsername}! You've logged in successfully!`);
+                    navigate('/home');
                 }
                 else {
                     setMessage('Invalid credentials!');
