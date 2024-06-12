@@ -12,4 +12,8 @@ const getBlogById = (id) => {
     return axios.get(`${blogUrl}/${id}`);
 };
 
-export { getAllBlogs, getBlogById };
+const writeBlogPost = (blog) => {
+    // make a POST request here 
+};
+
+export { getAllBlogs, getBlogById, writeBlogPost };

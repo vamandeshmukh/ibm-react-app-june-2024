@@ -20,7 +20,7 @@ const AppRoutes = () => {
                     <ToolBar />
                 </>
                 <Routes>
-                <Route path="write-blog" element={<WriteBlog />} />
+                    <Route path="write-blog" element={<WriteBlog />} />
                     <Route path="blog-list" element={<BlogList />} />
                     <Route path="blog-details/:id" element={<BlogDetails />} />
                     <Route path="login" element={<Login />} />
@@ -29,7 +29,6 @@ const AppRoutes = () => {
                     <Route path="home" element={<Navigate to="/" replace />} />
                     <Route exact path="/" element={<Home />} />
                     <Route path="*" element={<Page404 />} />
-
                 </Routes>
             </BrowserRouter>
         </>
