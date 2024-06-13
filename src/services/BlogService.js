@@ -1,3 +1,4 @@
+
 import axios from "axios";
 
 const blogUrl = 'https://jsonplaceholder.typicode.com/posts/';
@@ -18,3 +19,4 @@ const writeBlogPost = (blog) => {
 };
 
 export { getAllBlogs, getBlogById, writeBlogPost };
+

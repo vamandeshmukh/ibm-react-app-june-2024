@@ -42,7 +42,7 @@ const WriteBlog = () => {
                 <input type="text" name="title" value={writeBlogData.title} onChange={handleInput} />
                 <br />
                 <label htmlFor="body">Body</label>
-                <input type="text" name="body" value={writeBlogData.body} onChange={handleInput} />
+                <textarea type="text" name="body" value={writeBlogData.body} onChange={handleInput} />
                 <br />
                 <input type="submit" value="Submit" />
             </form>
