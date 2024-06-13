@@ -61,17 +61,34 @@ const Login = () => {
 
     return (
         <>
-            <h1>Login Component</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="username" value={loginData.username} onChange={handleInput} />
-                <br />
-                <input type="password" name="password" value={loginData.password} onChange={handleInput} />
-                <br />
-                <input type="submit" value="Login" />
-            </form>
-            <p>{message}</p>
-            <p>Not yet registerd? <Link to="/register">Register</Link> </p>
-            <p>Not yet registerd? <Link to='[`/blog-details/${blogId}`]'>Register</Link> </p>
+            <div className="container">
+
+                <h1>Login Component</h1>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" name="username" value={loginData.username} onChange={handleInput} />
+                    <br />
+                    <input type="password" name="password" value={loginData.password} onChange={handleInput} />
+                    <br />
+                    <input type="submit" value="Login" />
+                </form>
+                <p>{message}</p>
+                <p>Not yet registerd? <Link to="/register">Register</Link> </p>
+                <>
+                    <form className="col-6">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Email address</label>
+                            <input type="text" name="username" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" />
+                        </div>
+                        <input type="submit" class="btn btn-outline-primary" value="Submit" />
+                    </form>
+                    <p>{message}</p>
+                    <p>Not yet registerd? <Link to="/register">Register</Link> </p>
+                </>
+            </div>
         </>
     );
 };
