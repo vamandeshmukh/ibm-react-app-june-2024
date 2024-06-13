@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getBlogById } from "../services/BlogService";
 import { useParams } from "react-router-dom";
-import WriterDetails from "../WriterDetails";
+import WriterDetails from "./WriterDetails";
 import CommentDetails from "../CommentDetails";
 
 const BlogDetails = () => {
