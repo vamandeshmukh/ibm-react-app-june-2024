@@ -1,11 +1,12 @@
 import AppRoutes from "./components/AppRoutes";
-
+import Parent from './components/Parent';
 
 const App = () => {
 
   return (
     <div>
       <AppRoutes />
+      {/* <Parent /> */}
     </div>
   );
 }

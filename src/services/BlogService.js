@@ -3,6 +3,9 @@ import axios from "axios";
 
 const blogUrl = 'https://jsonplaceholder.typicode.com/posts/';
 
+const fun = (a = 5, b = 5) => a + b;
+fun(1, 2);
+
 const getAllBlogs = () => {
     console.log('getAllBlogs');
     return axios.get(blogUrl);

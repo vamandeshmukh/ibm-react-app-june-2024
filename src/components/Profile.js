@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { getProfile } from "../services/UserService";
 
-const Profile = () => {
+const Profile = ({ userId = 2 }) => {
     console.log('Profile');
 
     const [userProfile, setUserProfile] = useState('');
 
     useEffect(() => {
-        getProfile(2)
+        getProfile(userId)
             .then((response) => {
                 console.log(response.data);
                 setUserProfile(response.data);
@@ -39,3 +39,4 @@ const Profile = () => {
 }
 
 export default Profile;
+

@@ -1,6 +1,6 @@
 // AppRoutes.js
 
-import { BrowserRouter, Route, Routes, Link, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import Profile from "./Profile";
@@ -10,6 +10,7 @@ import ToolBar from "./ToolBar";
 import BlogDetails from "./BlogDetails";
 import BlogList from "./BlogList";
 import WriteBlog from "./WriteBlog";
+import Logout from "./Logout";
 
 const AppRoutes = () => {
 
@@ -20,6 +21,8 @@ const AppRoutes = () => {
                     <ToolBar />
                 </>
                 <Routes>
+                <Route path="logout" element={<Logout />} />
+                    <Route path="profile" element={<Profile />} />
                     <Route path="write-blog" element={<WriteBlog />} />
                     <Route path="blog-list" element={<BlogList />} />
                     <Route path="blog-details/:id" element={<BlogDetails />} />

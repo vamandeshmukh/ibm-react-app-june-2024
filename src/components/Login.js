@@ -2,9 +2,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../services/UserService";
 
-// import userService from "../services/UserService";
-// userService.login({});
-
 const Login = () => {
 
     const navigate = useNavigate();

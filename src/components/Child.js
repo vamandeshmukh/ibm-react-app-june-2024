@@ -1,13 +1,16 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
-const Child = (props) => {
+// const Child = (props) => {
+const Child = ({ parentToChild = 'Tonu', childToParent }) => {
 
     const childData = 'Monu';
-    const parentDataInChild = props.parentToChild;
+    // const parentDataInChild = props.parentToChild;
+    const parentDataInChild = parentToChild;
 
     const sendDataToParent = () => {
         console.log(childData);
-        props.childToParent(childData);
+        childToParent(childData);
     };
 
     return (
@@ -21,6 +24,8 @@ const Child = (props) => {
     );
 }
 
-Child.defaultProps = { parentToChild: 'Tonu' };
+Child.propTypes = {
+    parentToChild: PropTypes.number.isRequired
+};
 
 export default Child;

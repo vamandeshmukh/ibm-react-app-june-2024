@@ -2,11 +2,9 @@
 
 const Logout = () => {
 
-
-
     return (
         <>
-            <h1>Logout Component 1</h1>
+            <h1>Logout Component</h1>
         </>
     );
 }

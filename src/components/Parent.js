@@ -17,6 +17,7 @@ const Parent = () => {
             <p>Parent data in parent component: {parentData}</p>
             <p>Child data in parent component: {childInParent}</p>
             <Child childToParent={getDataFromChild} parentToChild={parentData} />
+            {/* <Child childToParent={getDataFromChild} /> */}
         </>
     );
 }
