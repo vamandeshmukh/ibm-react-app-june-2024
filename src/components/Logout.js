@@ -16,8 +16,9 @@ const Logout = () => {
     return (
         <>
             <div className="container mt-3">
-                <h1>Logout Component</h1>
-                <button type="button" className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <p className="display-4 text-primary mb-3">Logout Component</p>
+                <hr />
+                <button type="button" className="btn btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Logout
                 </button>
                 <div className="modal fade" id="exampleModal" tabindex="-1">

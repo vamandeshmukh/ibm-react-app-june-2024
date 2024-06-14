@@ -34,18 +34,26 @@ const WriteBlog = () => {
 
     return (
         <>
-            <h1>Write a Blog</h1>
-            <p>Express yourself</p>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="title">Title</label>
-                <input type="text" name="title" value={writeBlogData.title} onChange={handleInput} />
-                <br />
-                <label htmlFor="body">Body</label>
-                <textarea type="text" name="body" value={writeBlogData.body} onChange={handleInput} />
-                <br />
-                <input type="submit" value="Submit" />
-            </form>
-            <p> {message && message} </p>
+            <div className="container mt-3">
+                <p className="display-4 text-primary mb-3">Write a Blog</p>
+                <hr />
+                <p className="lead">Express yourself</p>
+                <div className="col-6">
+                    <form onSubmit={handleSubmit} className="form-group">
+                        <div className="mb-3">
+                            <label htmlFor="title" className="form-label">Title<span className="text-danger">*</span></label>
+                            <input type="text" name="title" className="form-control" value={writeBlogData.title} onChange={handleInput} placeholder="Please enter title" required autoFocus />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="body" className="form-label">Body<span className="text-danger">*</span></label>
+                            <textarea type="text" name="body" className="form-control" value={writeBlogData.body} onChange={handleInput} placeholder="Please enter body" required />
+                        </div>
+
+                        <input type="submit" className="btn btn-outline-primary" value="Submit" />
+                    </form>
+                    <p> {message && message} </p>
+                </div>
+            </div>
         </>
     );
 };

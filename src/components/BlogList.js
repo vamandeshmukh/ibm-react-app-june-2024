@@ -24,20 +24,30 @@ const BlogList = () => {
     };
 
     return (
-        <div className="container">
-            <>
-                <h1>Blog List Component</h1>
-                <hr />
-                <p >Click a blog title to read the blog post.</p>
-                <> {allBlogslist &&
-                    allBlogslist.map((blog, i) => {
-                        return <div obj={blog} key={i}> 
-                        <Link to={`/blog-details/${blog.id}`}>
-                            {blog.title}</Link> </div>;
-                    })
-                }</>
-            </>
-        </div>
+        <>
+            <div className="container">
+                <div className="row mt-3">
+                    <div className="col-2">
+                    </div>
+                    <div className="col-8">
+                        <p className="display-4 text-primary mb-3">IBM Blogs</p>
+                        <hr />
+                        <p className="lead" >Click a blog title to read the blog post.</p>
+                        <> {allBlogslist &&
+                            allBlogslist.map((blog, i) => {
+                                return <div obj={blog} key={i}>
+                                    <Link to={`/blog-details/${blog.id}`} className="text-decoration-none">
+                                        {blog.title}</Link> </div>;
+                            })
+                        }</>
+                        <hr />
+                    </div>
+                    <div className="col-2">
+                    </div>
+                </div>
+            </div>
+        </>
+
     );
 };
 export default BlogList;
